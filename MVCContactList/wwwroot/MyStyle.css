@@ -1,0 +1,13 @@
+﻿body {
+    width: 62%;
+    margin: auto;
+}
+
+#btnAddCustomer {
+    display: inline;
+    float: right;
+}
+
+thead {
+    font-weight: bold;
+}

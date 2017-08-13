@@ -1,0 +1,38 @@
+﻿@using MVCContactList.Models;
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Customer</title>
+    <script src="~/jquery-3.2.1.min.js"></script>
+    <link href="~/bootstrap.css" rel="stylesheet" />
+    <link href="~/MyStyle.css" rel="stylesheet" />
+
+</head>
+<body>
+    <h1>Edit Customer</h1>
+    @{Customer cust = (Customer)ViewData["customer"];
+
+        <form method="post" action="/customers/edit/@cust.Id">
+            <label>Company Name</label>
+            <br />
+            <input type="text" name="CompanyName" value="@cust.CompanyName" />
+            <br />
+
+            <label>Address</label>
+            <br />
+            <input type="text" name="Address" value="@cust.Address" />
+            <br />
+
+            <label>Number of Employees</label>
+            <br />
+            <input type="text" name="EmployeeCount" value="@cust.EmployeeCount" />
+            <br />
+
+            <input type="submit" value="Submit" />
+        </form>
+    }
+
+
+
+</body>
+</html>

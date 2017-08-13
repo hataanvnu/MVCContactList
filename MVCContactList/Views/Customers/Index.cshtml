@@ -1,0 +1,48 @@
+﻿@using MVCContactList.Models;
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <script src="~/jquery-3.2.1.min.js"></script>
+    <link href="~/bootstrap.css" rel="stylesheet" />
+    <link href="~/MyStyle.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Welcome!</h1>
+
+    <div>
+        <input id="btnAddCustomer" type="button" value="Add Customer" onclick="window.location.href='customers/create'" />
+        <h3>Here is a list of our current customers:</h3>
+    </div>
+
+    <br />
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td>Company Name</td>
+                <td>Address</td>
+                <td>Employee Count</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in (Customer[])ViewData["customers"])
+            {
+                <tr>
+                    <td>@item.CompanyName</td>
+                    <td>@item.Address</td>
+                    <td>@item.EmployeeCount</td>
+                    <td><input type="button" value="Edit" onclick="window.location.href='customers/edit/@item.Id'" /></td>
+                    <td><input type="button" value="Remove" onclick="window.location.href='customers/remove/@item.Id'" /></td>
+
+                </tr>
+            }
+            <tr>
+
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Create</title>
+    <script src="~/jquery-3.2.1.min.js"></script>
+    <link href="~/bootstrap.css" rel="stylesheet" />
+    <link href="~/MyStyle.css" rel="stylesheet" />
+</head>
+<body>
+
+    <h1>Create</h1>
+
+    <form method="post" action="/customers/create">
+        <label>Company Name</label>
+        <br />
+        <input type="text" name="CompanyName" required />
+        <br />
+
+        <label>Address</label>
+        <br />
+        <input type="text" name="Address" required />
+        <br />
+        
+        <label>Number of Employees</label>
+        <br />
+        <input type="text" name="EmployeeCount" required />
+        <br />
+
+        <input type="submit" value="Submit"/>
+    </form>
+
+</body>
+</html>
